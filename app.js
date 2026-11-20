@@ -118,6 +118,7 @@
   const imageFileName = $('#imageFileName');
   const privacyConsent = $('#chatPrivacyConsent');
   let selectedProblemImage = null;
+  let imageObjectUrl = null;
   let isAnalyzing = false;
 
   const appendBubble = (message, type) => {
@@ -128,7 +129,9 @@
     chatBody.scrollTop = chatBody.scrollHeight;
   };
   const setChatStatus = (message, connected) => {
-    chatStatus.textContent = message;
+    chatStatus.replaceChildren();
+    const dot = document.createElement('i');
+    chatStatus.append(dot, document.createTextNode(message));
     chatStatus.classList.toggle('is-connected', Boolean(connected));
   };
   const makeNode = (tag, className, content) => {
@@ -139,7 +142,7 @@
   };
   const serviceLabels = {
     plumbing:'سباكة', electrical:'كهرباء', carpentry:'نجارة',
-    'air-conditioning':'تكييف', painting:'دهانات وتشطيبات', cleaning:'تنظيف وصيانة'
+    'air-conditioning':'تكييف', painting:'دهانات', cleaning:'تنظيف'
   };
   const appendDiagnosis = data => {
     const result = data.diagnosis || {};
@@ -251,16 +254,16 @@
       $('#chatFoot').textContent='التحليل مبدئي. التقييمات من قاعدة SAN3TY، وتوفر الفني يتغير باستمرار.';
       if(payload.diagnosis&&(payload.diagnosis.urgency==='high'||payload.diagnosis.urgency==='emergency'))appendBubble('لو في شرر أو رائحة غاز أو دخان أو خطر مباشر: ابتعد عن المكان واتصل بالطوارئ أو الجهة المختصة. لا تحاول الإصلاح بنفسك.','bot');
     }catch(error){appendBubble(error.message||'حصل خطأ في الاتصال. حاول مرة أخرى.','bot');setChatStatus('تعذر الاتصال',false);$('#chatFoot').textContent='تحقق من إعداد Supabase وGemini ثم أعد المحاولة.';}
-    finally{isAnalyzing=false;button.disabled=false;button.textContent='↑';selectedProblemImage=null;imageInput.value='';imagePreview.hidden=true;imagePreviewImg.removeAttribute('src');privacyConsent.checked=false;}
+    finally{isAnalyzing=false;button.disabled=false;button.textContent='↑';selectedProblemImage=null;imageInput.value='';imagePreview.hidden=true;imagePreviewImg.removeAttribute('src');if(imageObjectUrl){URL.revokeObjectURL(imageObjectUrl);imageObjectUrl=null;}privacyConsent.checked=false;}
   };
   $('#uploadPhotoBtn')?.addEventListener('click',()=>imageInput.click());
   imageInput?.addEventListener('change',()=>{
     const file=imageInput.files&&imageInput.files[0];if(!file)return;
     if(!['image/jpeg','image/png','image/webp'].includes(file.type)){showToast('ارفع صورة بصيغة JPG أو PNG أو WebP.');imageInput.value='';return;}
     if(file.size>8*1024*1024){showToast('حجم الصورة أكبر من 8 ميجابايت. اختار صورة أصغر.');imageInput.value='';return;}
-    selectedProblemImage=file;imagePreviewImg.src=URL.createObjectURL(file);imageFileName.textContent=file.name;imagePreview.hidden=false;
+    selectedProblemImage=file;if(imageObjectUrl)URL.revokeObjectURL(imageObjectUrl);imageObjectUrl=URL.createObjectURL(file);imagePreviewImg.src=imageObjectUrl;imageFileName.textContent=file.name;imagePreview.hidden=false;
   });
-  $('#removeImageBtn')?.addEventListener('click',()=>{selectedProblemImage=null;imageInput.value='';imagePreview.hidden=true;imagePreviewImg.removeAttribute('src');privacyConsent.checked=false;});
+  $('#removeImageBtn')?.addEventListener('click',()=>{selectedProblemImage=null;imageInput.value='';imagePreview.hidden=true;imagePreviewImg.removeAttribute('src');if(imageObjectUrl){URL.revokeObjectURL(imageObjectUrl);imageObjectUrl=null;}privacyConsent.checked=false;});
   $('#chatSend')?.addEventListener('click',sendDiagnosis);
   chatInput?.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendDiagnosis();}});
 

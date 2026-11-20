@@ -1,16 +1,21 @@
 # Security Policy
 
-## Scope
+## Before launch
+- Never commit API keys, passwords, Supabase service-role/secret keys, or provider credentials.
+- `config.js` is public browser code and may contain only the Supabase Project URL and publishable/anon key. Keep `GEMINI_API_KEY` and Supabase service-role keys in Supabase Edge Function Secrets.
+- Keep Row Level Security enabled. The AI matching RPC returns only public directory fields for verified and available artisans; it must not expose phone numbers, email addresses, or private profile fields.
+- The AI diagnosis function is public by design for visitors and therefore has a server-side request quota. Monitor usage and add production-grade abuse controls before a public marketing launch.
+- Uploaded photos are resized in the browser and processed by the Edge Function; SAN3TY does not write them to its database. Images are still sent to Google Gemini after the user consents.
 
-SAN3TY is currently a frontend prototype with a starter Supabase schema. Do not submit real customer, address, identity, payment-card, or authentication data to the demo.
+## AI and privacy
+- Tell users that image analysis uses an external Google AI service. Do not ask for faces, identity documents, cards, keys, access codes, or other sensitive information.
+- The free Gemini API tier may use submitted content to improve Google's products. Review current provider terms and data processing conditions before launch. Consider a paid tier for sensitive workloads.
+- AI provides preliminary guidance only. Never present it as a definitive diagnosis, guarantee, quote, or substitute for a qualified technician. Do not instruct users to repair electrical, gas, fire, or structural hazards themselves.
 
-## Reporting a vulnerability
+## Platform safeguards
+- Keep roles, verification status, completed-job counts, ratings, booking lifecycle, and payment state under trusted server-side or administrative control.
+- Do not expose customer contact information to public artisan discovery.
+- Payment records are references/status only. Do not claim escrow or protected funds until a payment provider and compliant funds flow have been implemented and tested.
+- Before production, add authentication, booking authorization, dispute handling, audit logs, backup/retention rules, and a reviewed privacy notice.
 
-Please do not publish secrets, personal data, or exploitable details in a public issue. Contact the repository owner privately through GitHub to coordinate a responsible disclosure.
-
-## Deployment and secrets
-
-- Never commit `.env` files, access tokens, database passwords, Supabase `service_role` keys, or AI/payment provider secrets.
-- Browser code may only use public client keys protected by correctly tested Row Level Security policies.
-- Put privileged operations, payment webhooks, provider verification, and AI provider calls behind trusted server-side endpoints.
-- Review RLS, column grants, input validation, rate limits, logs, and backup/restore procedures before production use.
+Report security issues privately to the project maintainers rather than publishing exploit details.
