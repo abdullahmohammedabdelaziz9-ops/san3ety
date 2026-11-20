@@ -311,11 +311,11 @@ returns boolean language plpgsql security definer set search_path = ''
 as $$
 declare current_count integer;
 begin
- insert into public.ai_request_limits(fingerprint_hash,window_started_at,request_count)
+ insert into public.ai_request_limits as current_usage(fingerprint_hash,window_started_at,request_count)
  values(p_fingerprint_hash,now(),1)
  on conflict(fingerprint_hash) do update
- set request_count=case when public.ai_request_limits.window_started_at<now()-interval '1 hour' then 1 else public.ai_request_limits.request_count+1 end,
-     window_started_at=case when public.ai_request_limits.window_started_at<now()-interval '1 hour' then now() else public.ai_request_limits.window_started_at end
+ set request_count=case when current_usage.window_started_at<now()-interval '1 hour' then 1 else current_usage.request_count+1 end,
+     window_started_at=case when current_usage.window_started_at<now()-interval '1 hour' then now() else current_usage.window_started_at end
  returning request_count into current_count;
  return current_count<=least(greatest(coalesce(p_limit,12),1),30);
 end;
