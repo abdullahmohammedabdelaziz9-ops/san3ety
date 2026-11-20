@@ -108,3 +108,12 @@
  .stakeholder-grid{grid-template-columns:1fr}
 }
 @media(max-width:420px){.chat-demo-ai .chat-location{grid-template-columns:1fr}.revenue-grid{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr 1fr}}
+
+.revenue-equation{margin-top:24px;padding:18px 20px;border:1px solid #dce8df;border-radius:13px;background:#f3f8f2}
+.revenue-equation b{display:block;color:#237a67;font-size:11px}
+.revenue-equation p{margin:6px 0 0;color:#536b5d;font-size:9px;line-height:2}
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.kpi-row>div{padding:12px 10px;border:1px solid #edf0e9;border-radius:10px;background:#fff}
+.kpi-row b{display:block;color:#304b3f;font-size:8px}
+.kpi-row small{display:block;margin-top:4px;color:#8a958c;font-size:7px;line-height:1.6}
+@media(max-width:760px){.kpi-row{grid-template-columns:1fr 1fr}.kpi-row>div{padding:10px}}

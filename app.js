@@ -234,7 +234,7 @@
     if(!city||!area){showToast('اكتب المدينة والمنطقة عشان نرشح صنايعية قريبين منك.');(!city?$('#chatCity'):$('#chatArea')).focus();return;}
     const config=window.SAN3TY_CONFIG||{};
     if(!config.supabaseUrl||!config.supabaseAnonKey){appendBubble('المساعد جاهز من ناحية الواجهة، لكن الاتصال لم يُفعّل بعد. أضف Supabase URL وPublic/Anon key في config.js، وانشر Edge Function، ثم جرّب مرة أخرى.','bot');setChatStatus('في انتظار إعداد الاتصال',false);return;}
-    if(file&&!privacyConsent.checked){showToast('وافق على إرسال الصورة للتحليل أولًا، أو أزل الصورة واكتب وصف المشكلة.');return;}
+    if(!privacyConsent.checked){showToast('وافق على إرسال الصورة أو الوصف إلى Google Gemini أولًا.');return;}
     isAnalyzing=true;const button=$('#chatSend');button.disabled=true;button.textContent='…';
     $('#chatFoot').textContent='بنحلل المشكلة ونبحث عن أفضل تطابق من بيانات الصنايعية…';
     setChatStatus('جارٍ تحليل المشكلة',false);
