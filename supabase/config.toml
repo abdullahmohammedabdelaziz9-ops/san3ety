@@ -1,0 +1,4 @@
+project_id = "san3ty"
+
+[functions.diagnose-request]
+verify_jwt = false

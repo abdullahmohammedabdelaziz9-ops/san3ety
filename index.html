@@ -25,6 +25,7 @@
         <a href="#services">الخدمات</a>
         <a href="#how">إزاي بنشتغل؟</a>
         <a href="#smart">المساعد الذكي</a>
+        <a href="#business">مميزاتنا والإيرادات</a>
         <a href="#craftsmen">للصنايعية</a>
       </nav>
       <div class="nav-actions">
@@ -115,16 +116,49 @@
       </div>
     </section>
 
+    
     <section class="smart-section section-pad" id="smart">
       <div class="container smart-grid">
-        <div class="smart-copy" data-reveal><span class="eyebrow"><span class="eyebrow-dot"></span> SAN3TY AI ASSISTANT</span><h2>مش لازم تكون خبير…<br /><span class="text-gradient">إحنا بنفهمك.</span></h2><p>اشرح المشكلة بكلامك العادي. المساعد الذكي بيسألك الأسئلة المهمة، يرتب التفاصيل، ويساعدك تاخد قرار أوضح قبل الحجز.</p><div class="smart-points"><div><span>01</span><p><b>يفهم وصفك</b><small>لغة بسيطة من غير مصطلحات معقدة</small></p></div><div><span>02</span><p><b>يجمع التفاصيل</b><small>أسئلة ذكية تساعد في تحديد نطاق المشكلة</small></p></div><div><span>03</span><p><b>يساعدك تقارن</b><small>تقدير مبدئي وترشيحات مناسبة</small></p></div></div><small class="disclaimer">* المساعد الظاهر هنا نموذج تجريبي توضيحي، وليس خدمة AI متصلة حاليًا.</small></div>
-        <div class="chat-demo-wrap" data-reveal data-delay="120"><div class="chat-glow" aria-hidden="true"></div><div class="chat-demo"><div class="chat-header"><div class="chat-brand"><span class="ai-avatar">✳</span><div><b>مساعد SAN3TY</b><small><i></i> متاح للمساعدة</small></div></div><span class="chat-menu">•••</span></div><div class="chat-body" id="chatBody" aria-live="polite"><div class="chat-date">محادثة تجريبية</div><div class="chat-bubble bot-bubble">أهلاً بيك! 👋<br />أنا مساعد SAN3TY. احكيلي إيه المشكلة اللي عندك في البيت؟</div><div class="chat-bubble user-bubble">فيه تسريب مياه تحت حوض المطبخ.</div><div class="chat-bubble bot-bubble">تمام، خلينا نحددها سوا. التسريب مستمر طول الوقت ولا بيظهر وقت استخدام الحوض بس؟</div></div><div class="quick-replies" id="quickReplies"><button type="button" data-reply="التسريب مستمر طول الوقت">مستمر طول الوقت</button><button type="button" data-reply="بيظهر وقت الاستخدام بس">وقت الاستخدام بس</button><button type="button" data-reply="مش متأكد">مش متأكد</button></div><div class="chat-compose"><span>اكتب رسالتك…</span><button type="button" id="chatSend" aria-label="إرسال رسالة">↑</button></div><div class="chat-foot"><span>✦</span> إجابات تجريبية لعرض الفكرة</div></div><div class="chat-side-note"><span>✧</span><b>فهم أدق للمشكلة</b><small>قبل ما تحجز، تبقى عارف تسأل عن إيه.</small></div></div>
+        <div class="smart-copy" data-reveal>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> SAN3TY VISION AI</span>
+          <h2>صوّر المشكلة…<br /><span class="text-gradient">وسيّب الفهم علينا.</span></h2>
+          <p>مش لازم تعرف اسم الخدمة أو توصف العطل بمصطلحات فنية. ارفع صورة أو اكتب اللي حصل، والمساعد يحلل العلامات الظاهرة، يشرح الاحتمالات والخطوة الآمنة التالية، وبعدها يبحث في الصنايعية المسجلين والموثقين في منطقتك.</p>
+          <div class="smart-points">
+            <div><span>01</span><p><b>تحليل صورة أو وصف</b><small>فهم أولي للمشكلة باللغة العربية</small></p></div>
+            <div><span>02</span><p><b>شرح وخطوة آمنة</b><small>نعرفك إيه اللي ممكن يكون حاصل وإمتى تحتاج تدخل عاجل</small></p></div>
+            <div><span>03</span><p><b>ترشيح من قاعدة SAN3TY</b><small>حسب التخصص والمنطقة والتقييمات الحقيقية</small></p></div>
+          </div>
+          <small class="disclaimer">المساعد يقدم إرشادًا أوليًا وليس تشخيصًا فنيًا مؤكدًا. لا تنفذ إصلاحات كهرباء أو غاز أو أعمال خطرة بنفسك.</small>
+        </div>
+        <div class="chat-demo-wrap" data-reveal data-delay="120">
+          <div class="chat-glow" aria-hidden="true"></div>
+          <div class="chat-demo chat-demo-ai">
+            <div class="chat-header"><div class="chat-brand"><span class="ai-avatar">✳</span><div><b>مساعد SAN3TY الذكي</b><small id="chatStatus"><i></i> جاهز بعد إعداد الاتصال</small></div></div><span class="chat-menu">AI</span></div>
+            <div class="chat-body" id="chatBody" aria-live="polite">
+              <div class="chat-date">مساعد فهم المشكلة</div>
+              <div class="chat-bubble bot-bubble">أهلاً بيك في SAN3TY 👋<br />صوّر العطل أو اكتب اللي ملاحظُه. هشرح لك الاحتمالات والخطوة الآمنة، وبعدها أبحث عن الصنايعية المتاحين والموثقين في منطقتك.</div>
+            </div>
+            <div class="chat-location">
+              <label>المدينة<input id="chatCity" type="text" placeholder="مثلاً: الجيزة" autocomplete="address-level2" /></label>
+              <label>المنطقة<input id="chatArea" type="text" placeholder="مثلاً: فيصل أو الدقي" autocomplete="address-level3" /></label>
+            </div>
+            <div class="chat-upload">
+              <input id="problemImage" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" hidden />
+              <button class="upload-photo-btn" id="uploadPhotoBtn" type="button"><span>＋</span> صوّر أو ارفع صورة</button>
+              <div class="image-preview" id="imagePreview" hidden><img id="imagePreviewImg" alt="معاينة صورة المشكلة" /><div><b id="imageFileName">صورة المشكلة</b><small>سيتم تصغير الصورة قبل إرسالها للتحليل</small></div><button id="removeImageBtn" type="button" aria-label="إزالة الصورة">×</button></div>
+            </div>
+            <label class="chat-consent"><input id="chatPrivacyConsent" type="checkbox" /> <span>أوافق على إرسال الصورة إلى خدمة AI لتحليلها. لن نخزن الصورة في قاعدة بيانات SAN3TY.</span></label>
+            <div class="chat-compose chat-compose-input"><textarea id="chatInput" rows="2" placeholder="اكتب أي تفاصيل إضافية… مثال: الميه بتنقط من تحت الحوض" aria-label="وصف المشكلة"></textarea><button type="button" id="chatSend" aria-label="حلل المشكلة">↑</button></div>
+            <div class="chat-foot" id="chatFoot"><span>✦</span> تحليل الصور يحتاج إعداد Gemini وSupabase أولًا</div>
+          </div>
+          <div class="chat-side-note"><span>✧</span><b>ترشيح مبني على بيانات</b><small>مش أسماء عشوائية: النتائج من صنايعية موثقين وتقييماتهم.</small></div>
+        </div>
       </div>
     </section>
 
     <section class="request-section section-pad" id="request">
       <div class="container request-shell" data-reveal>
-        <div class="request-copy"><span class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> ابدأ من هنا</span><h2>خلّي أول خطوة<br /><span>علينا.</span></h2><p>اختار نوع الخدمة واحكيلنا محتاج إيه. النموذج ده للعرض التجريبي، ومش بيبعت طلب حقيقي حاليًا.</p><div class="request-assurance"><span>✓</span> مفيش التزام قبل ما التفاصيل تبقى واضحة</div><div class="request-orb" aria-hidden="true">S<span>3</span></div></div>
+        <div class="request-copy"><span class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> ابدأ من هنا</span><h2>خلّي أول خطوة<br /><span>علينا.</span></h2><p>تقدر تستخدم النموذج اليدوي كالمعتاد، أو تبدأ من المساعد الذكي بصورة للمشكلة. النموذج اليدوي هنا ما زال معاينة ولا يرسل حجزًا فعليًا.</p><div class="request-assurance"><span>✓</span> مفيش التزام قبل ما التفاصيل تبقى واضحة</div><div class="request-orb" aria-hidden="true">S<span>3</span></div></div>
         <form class="request-form" id="requestForm">
           <div class="form-top"><div><small>طلب خدمة جديد</small><h3>محتاج مساعدة في إيه؟</h3></div><span class="form-step">01 <i>/</i> 02</span></div>
           <label for="serviceSelect">نوع الخدمة</label><div class="select-wrap"><select id="serviceSelect" required><option value="" selected disabled>اختار الخدمة المناسبة</option><option>سباكة</option><option>كهرباء</option><option>نجارة</option><option>تكييف</option><option>دهانات</option><option>تنظيف</option><option>خدمة أخرى</option></select><span>⌄</span></div>
@@ -139,6 +173,41 @@
       <div class="container craftsmen-grid"><div class="craftsmen-visual" data-reveal><div class="craftsmen-card"><div class="craftsmen-card-head"><span>مساحة الصنايعي</span><span class="status-tag">● نموذج المنصة</span></div><div class="profile-row"><div class="profile-avatar">م</div><div><b>ملفك المهني</b><small>خبرتك تستحق إنها تظهر</small></div><span class="verified-mark">✓</span></div><div class="profile-stats"><div><b>ملف واضح</b><small>مهاراتك وخبرتك</small></div><div><b>فرص أكثر</b><small>وصول لعملاء جدد</small></div></div><div class="profile-progress"><div><span>اكتمال الملف</span><b>80%</b></div><i><span></span></i></div><div class="profile-notice"><span>✦</span> خلّي شغلك وتقييماتك يتكلموا عنك</div></div><div class="craftsmen-stamp">SAN3TY<br /><small>PARTNER</small></div></div><div class="craftsmen-copy" data-reveal data-delay="120"><span class="eyebrow"><span class="eyebrow-dot"></span> شريك نجاحنا</span><h2>شغلك يستاهل<br /><span class="text-gradient">فرصة أكبر.</span></h2><p>لو أنت صنايعي محترف، SAN3TY بيساعدك تعرض خبرتك بشكل منظم، توصل لعملاء جدد، وتتابع طلباتك ومستحقاتك بوضوح.</p><ul class="benefit-list"><li><span>✓</span> بروفايل مهني يعرض مهاراتك وتقييماتك</li><li><span>✓</span> فرص وصول لعملاء مهتمين بخدمتك</li><li><span>✓</span> تفاصيل طلبات ومواعيد أكثر تنظيمًا</li><li><span>✓</span> آلية واضحة للعمولات والمستحقات</li></ul><button class="btn btn-dark" type="button" data-open="joinModal">انضم كمقدم خدمة <span>←</span></button><small class="disclaimer">* التسجيل الظاهر للتجربة فقط، ولا يتم إنشاء حساب حقيقي.</small></div></div>
     </section>
 
+    
+    <section class="business-section section-pad" id="business">
+      <div class="container">
+        <div class="section-heading business-heading" data-reveal>
+          <div><span class="eyebrow"><span class="eyebrow-dot"></span> VALUE & BUSINESS MODEL</span><h2>أكتر من مجرد دليل صنايعية.<br /><span class="text-gradient">منظومة خدمة متكاملة.</span></h2></div>
+          <p>SAN3TY بينظم رحلة العميل والصنايعي في مكان واحد: من فهم المشكلة، لاختيار مقدم الخدمة، للتنفيذ والتقييم والمتابعة.</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card" data-reveal><span class="value-icon">⌕</span><b>وقت أقل في البحث</b><p>بدل مكالمات وسؤال المعارف ومقارنة عشوائية، تلاقي خيارات مناسبة حسب التخصص والمنطقة.</p></article>
+          <article class="value-card" data-reveal data-delay="60"><span class="value-icon">✳</span><b>فهم أوضح للمشكلة</b><p>تحليل مبدئي للصورة أو الوصف يجهزك تتكلم مع الفني وتشرح العطل بشكل أدق.</p></article>
+          <article class="value-card" data-reveal data-delay="100"><span class="value-icon">★</span><b>اختيار مبني على الثقة</b><p>تقييمات ومراجعات وعدد أعمال مكتملة، مع إبراز حالة التوثيق والتوافر.</p></article>
+          <article class="value-card" data-reveal><span class="value-icon">▣</span><b>رحلة منظمة</b><p>طلب ومواعيد وتحديثات ورسائل وتقييم بعد انتهاء الخدمة بدل تفاصيل متفرقة.</p></article>
+          <article class="value-card" data-reveal data-delay="60"><span class="value-icon">⌂</span><b>فرص أفضل للصنايعي</b><p>ملف مهني يعرض التخصص والخبرة ويقلل الاعتماد على التسويق الشخصي وحده.</p></article>
+          <article class="value-card" data-reveal data-delay="100"><span class="value-icon">↗</span><b>متابعة وشفافية</b><p>سياسات واضحة للعمولة والرسوم وحالة الطلب، مع مسار للشكاوى والنزاعات.</p></article>
+        </div>
+        <div class="business-model">
+          <div class="business-model-copy" data-reveal><span class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> REVENUE MODEL</span><h2>SAN3TY بيكسب<br /><span>منين؟</span></h2><p>نموذج الإيرادات المقترح متنوع؛ يبدأ من نجاح الطلب نفسه، ثم يضيف دخلًا متكررًا وخدمات للشركات. كل الرسوم تظهر بوضوح قبل الموافقة.</p><div class="revenue-note"><b>قاعدة مهمة:</b> ترتيب التوصيات الطبيعية يعتمد على الجودة والتقييم والملاءمة. أي ظهور مدفوع لازم يتوسم بوضوح كإعلان.</div></div>
+          <div class="revenue-grid">
+            <article class="revenue-card"><span>01</span><div><b>عمولة على الطلب المكتمل</b><p>النسبة المتفق عليها من قيمة الخدمة بعد اكتمالها، وهي مصدر الدخل الأساسي المقترح.</p></div><small>دخل مرتبط بالنجاح</small></article>
+            <article class="revenue-card"><span>02</span><div><b>اشتراكات الصنايعية</b><p>باقات اختيارية لأدوات تنظيم العمل، تقارير الأداء، وإدارة المواعيد والطلبات.</p></div><small>دخل متكرر</small></article>
+            <article class="revenue-card"><span>03</span><div><b>ظهور ترويجي معلن</b><p>مساحات ترويجية مدفوعة للصنايعي أو الشريك، منفصلة بوضوح عن ترتيب الجودة.</p></div><small>إعلانات موضحة</small></article>
+            <article class="revenue-card"><span>04</span><div><b>رسوم خدمة شفافة</b><p>رسوم حجز أو تنسيق صغيرة عند تقديم قيمة فعلية، تظهر للعميل قبل تأكيد الطلب.</p></div><small>حسب الخدمة</small></article>
+            <article class="revenue-card"><span>05</span><div><b>عقود الشركات والعقارات</b><p>اتفاقيات صيانة دورية للمكاتب والعيادات والكمباوندات ومديري العقارات.</p></div><small>B2B & اشتراكات</small></article>
+            <article class="revenue-card"><span>06</span><div><b>شراكات واشتراكات مميزة</b><p>شراكات معلنة مع موردي قطع الغيار والضمانات وخطط الصيانة الدورية، دون فرض مورد بعينه.</p></div><small>خدمات إضافية</small></article>
+          </div>
+        </div>
+        <div class="stakeholder-grid">
+          <article><span>للعميل</span><b>وقت وقلق أقل</b><p>بحث أقل، فهم أفضل، اختيارات أوضح، وتوثيق لمسار الخدمة.</p></article>
+          <article><span>للصنايعي</span><b>عملاء وفرص أكثر</b><p>تسويق منظم، سمعة رقمية، طلبات مرتبة، وفرصة لبناء دخل متكرر.</p></article>
+          <article><span>للمنصة</span><b>نمو قابل للقياس</b><p>عمولة من الطلبات الناجحة، دخل متكرر، وشراكات طويلة الأجل.</p></article>
+        </div>
+        <p class="business-footnote">هذه مصادر دخل مقترحة لخطة العمل وليست إيرادات محققة أو خدمات دفع مفعّلة حاليًا. يلزم اختبار التسعير والعمولات مع العملاء ومقدمي الخدمة، ومراجعة المتطلبات القانونية والضريبية قبل الإطلاق التجاري.</p>
+      </div>
+    </section>
+
     <section class="final-cta"><div class="container final-cta-inner" data-reveal><div><span class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> SAN3TY — صنعتي</span><h2>بيتك أمانة…<br /><span>واختيارك كمان.</span></h2></div><div class="final-cta-action"><p>خلّي طلب الخدمة المرة الجاية أذكى وأسهل.</p><a href="#request" class="btn btn-accent btn-large">اطلب خدمتك <span>←</span></a></div><div class="final-spark" aria-hidden="true">✳</div></div></section>
   </main>
 
@@ -148,6 +217,7 @@
   <div class="modal-backdrop" id="joinModal" role="dialog" aria-modal="true" aria-labelledby="joinTitle" hidden><div class="modal-card"><button class="modal-close" type="button" data-close aria-label="إغلاق">×</button><span class="modal-symbol">✦</span><span class="eyebrow"><span class="eyebrow-dot"></span> انضم إلى شبكة SAN3TY</span><h3 id="joinTitle">خلّي خبرتك توصل لناس أكتر</h3><p>سجّل اهتمامك كتجربة أولية. البيانات مش هتتخزن أو تتبعت لأي مكان.</p><form id="joinForm" class="modal-form"><label for="joinName">الاسم</label><input id="joinName" required placeholder="اسمك بالكامل" /><label for="joinSkill">التخصص</label><select id="joinSkill" required><option value="" disabled selected>اختار تخصصك</option><option>سباكة</option><option>كهرباء</option><option>نجارة</option><option>تكييف</option><option>دهانات وتشطيبات</option><option>تنظيف وصيانة</option></select><button class="btn btn-dark modal-action" type="submit">تأكيد تجريبي</button></form><small class="modal-note">لا يتم إنشاء حساب حقيقي في هذه النسخة.</small></div></div>
   <div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden><div class="modal-card"><button class="modal-close" type="button" data-close aria-label="إغلاق">×</button><span class="modal-symbol">⌑</span><span class="eyebrow"><span class="eyebrow-dot"></span> حساب SAN3TY</span><h3 id="loginTitle">أهلاً بعودتك</h3><p>تسجيل الدخول غير مفعّل في النسخة التجريبية. هنربطه بخدمة المصادقة عند تجهيز الـBackend.</p><button class="btn btn-dark modal-action" type="button" data-close>تمام</button><small class="modal-note">قريبًا — حساب واحد لكل احتياجات بيتك.</small></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
